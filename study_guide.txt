@@ -41,12 +41,30 @@ Register, MAR and MBR
 
 Question: Understand the basic instruction execution cycle, including interrupt
 check/processing.
+    load instruction to PC
+    -> load PC To MAR
+    -> inc to next instruction PC
+    -> load needed data to MDR 
+    -> MAR to IR->jump?
+        -yes> to step one 
+        -no> execute instruction 
+    -> interrupt?
+        -yes>service interrupt 
+        -no> to step 1. 
 
     
 
-What was the original motivation for multi-programming?
+Question:What was the original motivation for multi-programming?
+    The idea of multi-programming is to decrees CPU idle time. 
+    when a process needs to complete an I/O task the CPU will allow the next 
+    process to run  while the first finishes the I/O operation.
 
-Four classes of interrupts; interrupt processing
+Question:Four classes of interrupts; interrupt processing
+    1.Program (illegal instructions-> 0/number  )
+	2.Timer (made by a clock allows for timed processing)
+	3.I/O (signal completion of task or an error)
+	4.Hardware failure (power, memory failure)
+
 
 Be able to describe the memory hierarchy, define hit ratio, and compute average
 system access time (as on your homework). Know the purpose of cache memory 
