@@ -1,0 +1,197 @@
+0.0 GENERAL GUIDELINES:  
+===============================================================================
+
+Review your notes and the textbook.  Use the Power Points as a guideline for
+what to study, but don’t limit your study to the Power Points alone.  Power
+Points not discussed in class won’t be on the test.
+
+Check out the summary at the end of each chapter as well as the chapter review
+questions; some of them are helpful.
+
+Review homework assignments.
+
+Learn to prioritize; not every item is of equal importance.  For example,
+understanding concurrency and the need for mutual exclusion is more important
+than knowing what a mailbox is.
+
+If you have questions about any of the items below, please ask in class on
+Tuesday or email me about them.  If are unsure about something other students
+probably will be as well and it will be helpful to everyone to discuss it in
+class.
+
+
+1.0 Computer System Sverview
+===============================================================================
+
+Question: Know the purpose/function of the Program Counter, Instruction
+Register, MAR and MBR
+
+    Program Counter - an incrementing counter that keeps track of the memory
+    address of which instruction is to be executed next
+
+    Instruction Register - the part of a CPU's control unit that stores the
+    instruction currently being executed or decoded.
+
+    MAR (Memory Address Register) - the address in main memory that is
+    currently being read or written
+
+    MBR (Memory Buffer Register) - a two-way register that holds data fetched
+    from memory (and ready for the CPU to process) or data waiting to be stored
+    in memory
+
+Question: Understand the basic instruction execution cycle, including interrupt
+check/processing.
+
+    
+
+What was the original motivation for multi-programming?
+
+Four classes of interrupts; interrupt processing
+
+Be able to describe the memory hierarchy, define hit ratio, and compute average
+system access time (as on your homework). Know the purpose of cache memory 
+
+How does DMA I/O improve performance in a multi-programmed computer system?
+
+State a difference/similarity between a Symmetric MultiProcessor(SMP) and a
+multicore computer.
+
+
+2.0 Operating System Overview
+===============================================================================
+
+Three objectives of an operating system.
+
+What is an OS kernel?
+
+Why are the following hardware features (originally introduced to support batch
+processing) important in multiprogrammed operating systems?
+
+Memory protection
+Timers
+Privileged instructions
+Interrupts 
+Difference between user mode and kernel mode of execution
+Difference between batch multiprocessing and time sharing systems
+Definition of process
+What is the execution context, or state, of a process?
+Be sure you understand the concepts of interleaved and overlapped execution.
+
+
+3.0 Processes
+===============================================================================
+
+How does a process differ from a program?
+
+What’s the purpose of a Process Control Block? (PCB) What are some of its
+contents?
+
+Be able to describe the 5-State process model on page 117.  Know the meaning of
+each state and the events that cause a process to transition from one state to
+another.
+
+How does the addition of swapping and suspended states modify the 5-state
+model?
+
+Explain the role of system calls (supervisor calls) in a typical operating
+system.
+
+Mechanisms for interrupting process execution (p. 137) and examples of events
+that might trigger them.
+
+Be able to distinguish between a mode switch and a process switch and give an
+example of an event that would cause each type of switch.
+
+In UNIX, what is the difference between the user running and kernel running
+state?
+
+
+4.0 Threads
+===============================================================================
+
+What is the relation between a process and a thread?
+
+Be able to give one use for threads in a single-user multiprocessing system.
+
+Disadvantage of structuring an application as multiple cooperating programs
+versus a single multithreaded program.
+
+State the difference between a KLT and a ULT and give advantages and
+disadvantages of each type of thread.
+
+In Windows, what is the Standby state?
+
+
+5.0 Concurrency: Mutual Exclusion and Synchronization
+===============================================================================
+
+Multiprogramming versus multiprocessing
+
+Table 5.1: understand/be able to define and discuss these terms (except
+livelock)
+
+Understand how interleaved or overlapped execution of critical sections can
+cause data incoherence. See examples on page 201 & 203 which demonstrate the
+problem on a uniprocessor and a multiprocessor.
+
+What are some hardware techniques for guaranteeing mutual exclusion?  What are
+their disadvantages?
+
+What is a semaphore?  Be able to state the algorithms for a general counting
+semaphore and trace its behavior.
+
+Know how semaphores can be used to guarantee mutual exclusion.  
+
+Be able to state the conditions of the Producer Consumer problem.  Understand
+the solution to the bounded-buffer PC problem with semaphores (page 226).  No
+need to memorize, but know how it works.
+
+What are the basic characteristics of a monitor? What is a difference between a
+condition variable and semaphore?
+
+Can messages be used for process synchronization?
+
+What is the difference between a blocking and a non-blocking message send or
+receive?
+
+What is a mailbox, with respect to message passing?
+
+Know the characteristics of the Readers and Writers problem.  If given the
+algorithms, be able to identify the purpose of the various semaphores and
+variables.
+
+What is a UNIX pipe?
+
+Be able to work problems similar to the ones on the homework.
+
+
+6.0 Deadlock
+===============================================================================
+
+Define deadlock
+
+What are the four conditions that are necessary for a deadlock to take place?
+
+Know the difference between deadlock prevention & deadlock avoidance, and be
+able to discuss each in terms of effectiveness, cost (execution time, burden
+placed on programmers, etc.). Study Table 6.1 on page 266.
+
+What is deadlock detection?
+
+
+7.0 Program
+===============================================================================
+
+Understand how hash tables work: uniqueness of keys, insert & lookups,
+collisions, etc.
+
+Given a hash function and a small set of data be able to demonstrate your
+understanding of the hashing process.
+
+
+8.0 Homework
+===============================================================================
+
+Be able to work problems similar to those on your homework
+
+
