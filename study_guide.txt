@@ -186,16 +186,49 @@ Be able to work problems similar to the ones on the homework.
 6.0 Deadlock
 ===============================================================================
 
-Define deadlock
+Question: Define deadlock
+	The happenstance where two processes are both waiting on each other to finish or release resources. 
+	
+Question: What are the four conditions that are necessary for a deadlock to take place?
+	1.Mutual exclusion.
+	2.No preemption
+	3.Hold and wait
+	4.Circular wait
 
-What are the four conditions that are necessary for a deadlock to take place?
-
-Know the difference between deadlock prevention & deadlock avoidance, and be
+Question: Know the difference between deadlock prevention & deadlock avoidance, and be
 able to discuss each in terms of effectiveness, cost (execution time, burden
 placed on programmers, etc.). Study Table 6.1 on page 266.
 
-What is deadlock detection?
+	Deadlock prevention: 
+		Getting all resources at initialization: 
+			Good: Works well in bursts of activity. 
+			Bad: No preemption necessary. 
+			Bad: Slows down initialization process, you have to know what the process needs beforehand.
+			
+		Preemption: 
+			Good when resources and be slave/restored easily. 
+			Bad: Needlessly preempts. 
+			
+		Recourse ordering: 
+			Good: Requires programmers to state programs needed resources and when they need them. 
+			Bad: Can no longer make incremental resource requests
 
+		Deadlock avoidance:
+			Find one safe execution path: 
+				Good: No preemption needed. 
+				Bad: Must know what the process needs before initialization. 
+				Bad: Processes can be blocked for long times
+
+		Deadlock Detection:	   
+			Check for deadlock periodically: 
+				Good: Ever delays process initiation
+				Good: Employs online handling. 
+				Bad: Inherit preemption losses.
+
+
+Question: What is deadlock detection?
+	An algorithm that continually checks to see if a deadlock is happening, 
+	this consumes resources based of how often it checks to ee if a deadlock is happening   
 
 7.0 Program
 ===============================================================================
